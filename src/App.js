@@ -10,7 +10,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <ItemListContainer greeting = "Desafio CREA TU LANDING"/>
+      <ItemListContainer greeting = "PROMISES, ASINCRONIA, MAP"/>
     </>
   );
 }
