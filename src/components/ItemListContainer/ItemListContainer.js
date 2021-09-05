@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { pedirDatos } from '../../funciones/pedirDatos';
 import { ItemList } from './itemList';
 import { useParams } from "react-router-dom";
 
 export const ItemListContainer = () => {
+    
+  
     const { catId } = useParams();
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);

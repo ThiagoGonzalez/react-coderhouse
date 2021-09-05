@@ -5,7 +5,8 @@ export const stock = [
         precio: 500,
         category: 'consola',
         desc: "Sony PS5",
-        img: "https://s.fenicio.app/f/comp/productos/consola-ps5_1920-1200_1623094345_a7e.jpg"
+        img: "https://s.fenicio.app/f/comp/productos/consola-ps5_1920-1200_1623094345_a7e.jpg",
+        stock: 2
     },
     {
         id: 2,
@@ -13,7 +14,8 @@ export const stock = [
         precio: 500,
         category: 'consola',
         desc: "Microsoft Xbox",
-        img: "https://www.casanissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/x/b/xbox_one_series_x_perfil_-1_1.jpg"
+        img: "https://www.casanissei.com/media/catalog/product/cache/16a9529cefd63504739dab4fc3414065/x/b/xbox_one_series_x_perfil_-1_1.jpg",
+        stock: 20
     },
     {
         id: 3,
@@ -21,7 +23,8 @@ export const stock = [
         precio: 400,
         category: 'consola',
         desc: "Nintendo Switch",
-        img: "https://pixelstore.com.ar/wp-content/uploads/2021/01/nintendo.jpg"
+        img: "https://pixelstore.com.ar/wp-content/uploads/2021/01/nintendo.jpg",
+        stock: 5
     },
     {
         id: 4,
@@ -29,7 +32,8 @@ export const stock = [
         precio: 300,
         category: 'componente',
         desc: "Nvidia GeForce 1660 Super OC 6gb",
-        img: "https://s3-sa-east-1.amazonaws.com/saasargentina/odgbjKmSstbjSpg0AAgv/imagen"
+        img: "https://s3-sa-east-1.amazonaws.com/saasargentina/odgbjKmSstbjSpg0AAgv/imagen",
+        stock: 6
     },
     {
         id: 5,
@@ -37,7 +41,8 @@ export const stock = [
         precio: 200,
         category: 'componente',
         desc: "Procesador Intel i5 10th GEN",
-        img: "http://www.siscomp.com.ar/image/cache/data/COMPUTADORAS/Procesadores/3-166-500x500.jpg"
+        img: "http://www.siscomp.com.ar/image/cache/data/COMPUTADORAS/Procesadores/3-166-500x500.jpg",
+        stock: 10
     },
     {
         id: 6,
@@ -45,6 +50,7 @@ export const stock = [
         precio: 60,
         category: 'periferico',
         desc: "Mouse ZOWIE",
-        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/349/695/products/ec2-wh_011-552547e3cd1f0480f016156499828591-1024-1024.jpg"
+        img: "https://d3ugyf2ht6aenh.cloudfront.net/stores/349/695/products/ec2-wh_011-552547e3cd1f0480f016156499828591-1024-1024.jpg",
+        stock: 12
     }
 ]
