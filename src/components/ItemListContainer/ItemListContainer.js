@@ -1,7 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { pedirDatos } from '../../funciones/pedirDatos';
+import React, { useEffect, useState } from 'react'
 import { ItemList } from './itemList';
 import { useParams } from "react-router-dom";
+import { Loader } from "../Loader/Loader";
+import { getFirestore } from '../../firebase/config';
+
 
 export const ItemListContainer = () => {
     
@@ -11,22 +13,18 @@ export const ItemListContainer = () => {
     const [loading, setLoading] = useState(false);
   
     useEffect(() => {
-      setLoading(true);
-  
-      pedirDatos()
-        .then((res) => {
-          if (catId) {
-            const arrayFiltrado = res.filter((prod) => prod.category === catId);
-            setData(arrayFiltrado);
-          } else {
-            setData(res);
+      
+      const db = getFirestore()
+      const productos = db.collection('productos')
+
+      productos.get().then((response) => {
+          const data = response.docs.map((doc) => ({...doc.data(), id: doc.id}))
+          if(catId){
+              setData(data.filter(el => el.category ===catId))
           }
-        })
-        .catch((err) => console.log(err))
-        .finally(() => {
-          setLoading(false);
-        });
+      })
+
     }, [catId]);
   
-    return <>{loading ? <h2>Cargando...</h2> : <ItemList productos={data} />};</>;
+    return <>{loading ? <Loader/> : <ItemList productos={data} />};</>;
   };
