@@ -5,6 +5,7 @@ import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
 import { Context } from "./context/Context";
 import { useState } from "react";
+import { CartScreen } from "./components/CartScreen/CartScreen";
 
 
 
@@ -13,10 +14,7 @@ function App() {
   const [carrito, setCarrito] = useState([])
 
   const agregarAlCarrito = (prod) => {
-    setCarrito([
-        ...carrito,
-        prod
-    ])
+    setCarrito([...carrito,prod])
   }
 
   const eliminarDelCarrito = (id) => {
@@ -51,7 +49,7 @@ function App() {
               <ItemDetailContainer/>
             </Route>
             <Route exact path="/cart">
-              <h1>Proximamente</h1>
+              <CartScreen/>
             </Route>
           </Switch>
       </BrowserRouter>

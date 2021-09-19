@@ -25,3 +25,4 @@ export const ItemDetail = ({category, id, nombre, desc, img, precio, stock}) => 
     )
 
 }
+

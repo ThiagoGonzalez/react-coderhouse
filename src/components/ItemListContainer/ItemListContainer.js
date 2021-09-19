@@ -10,7 +10,7 @@ export const ItemListContainer = () => {
   
     const { catId } = useParams();
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
+    const [loading] = useState(false);
   
     useEffect(() => {
       
@@ -21,6 +21,9 @@ export const ItemListContainer = () => {
           const data = response.docs.map((doc) => ({...doc.data(), id: doc.id}))
           if(catId){
               setData(data.filter(el => el.category ===catId))
+          }
+          else{
+            setData(data)
           }
       })
 
