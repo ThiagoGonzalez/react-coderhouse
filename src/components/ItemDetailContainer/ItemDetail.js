@@ -1,5 +1,6 @@
 import { Counter } from '../Counter/Counter'
 import { Context } from '../../context/Context'
+import { Link } from 'react-router-dom'
 
 import React, { useContext, useState } from 'react'
 
@@ -21,6 +22,10 @@ export const ItemDetail = ({category, id, nombre, desc, img, precio, stock}) => 
             <Counter max={stock} cantidad={cantidad} setCantidad={setCantidad} agregar={handleAdd}/>
             <img src={img} alt={nombre}/>
             <p>{desc}</p>
+
+            <Link to="/cart">
+                <button className="btn btn-success">Terminar compra</button>
+            </Link>
         </div>
     )
 

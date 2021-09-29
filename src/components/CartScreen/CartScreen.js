@@ -1,11 +1,12 @@
 import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../../context/Context";
 
 export const CartScreen = () => {
   const { carrito, eliminarDelCarrito, vaciarCarrito } = useContext(Context);
 
   return (
-    <div>
+    <div class = "container">
       <h1>Resumen de compra</h1>
       {carrito.map((prod) => (
         <div>
@@ -19,9 +20,11 @@ export const CartScreen = () => {
       <button className="btn btn-danger" onClick={vaciarCarrito}>
         Vaciar carrito
       </button>
-      <button className="btn btn-success" onClick={vaciarCarrito}>
-        Finalizar compra
-      </button>
+      <Link to="/checkout">
+          <button className="btn btn-success">
+            Finalizar compra
+          </button>
+      </Link>
     </div>
   );
 };
