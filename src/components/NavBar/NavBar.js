@@ -6,14 +6,18 @@ import './NavBar.css'
 export const NavBar = () => {
 
     return(
-        <header>
-            <nav>
-                <Link className = "mx-4" to={"/"}>Inicio</Link>
-                <Link className = "mx-1" to={"/category/consola"}>Consolas</Link>
-                <Link className = "mx-1" to={"/category/componente"}>Componentes</Link>
-                <Link className = "mx-1" to={"/category/periferico"}>Perifericos</Link>
-                <CartWidget/>
+        <header className = "encabezado">
+            <Link to = {"/"}>
+                <h1>CoderStore</h1>
+            </Link>
+            <nav class>
+                <Link className = "mx-4 link" to={"/"}>Inicio</Link>
+                <Link className = "mx-4 link" to={"/category/consola"}>Consolas</Link>
+                <Link className = "mx-4 link" to={"/category/componente"}>Componentes</Link>
+                <Link className = "mx-4 link" to={"/category/periferico"}>Perifericos</Link>    
             </nav>
+            <CartWidget/>
+
 
         </header>
         

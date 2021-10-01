@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import {FaShoppingCart} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
-import { Context } from '../../context/Context'
+import { CartContext } from '../../context/CartContext'
 
 export const CartWidget = () => {
 
 
-    const {cantidadCarrito} = useContext(Context)
+    const {cantidadCarrito} = useContext(CartContext);
 
     return(
         <div>

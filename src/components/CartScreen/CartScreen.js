@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../../context/Context";
+import { CartContext } from "../../context/CartContext";
 
 export const CartScreen = () => {
-  const { carrito, eliminarDelCarrito, vaciarCarrito } = useContext(Context);
+  const { carrito, eliminarDelCarrito, vaciarCarrito } = useContext(CartContext);
 
   return (
     <div class = "container">

@@ -3,7 +3,8 @@ import { ItemListContainer } from "./components/ItemListContainer/ItemListContai
 import './Styles/Styles.css'
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom'
 import { ItemDetailContainer } from "./components/ItemDetailContainer/ItemDetailContainer";
-import { Context } from "./context/Context";
+import { ContextProvider } from "./context/Context";
+import { CartProvider } from "./context/CartContext";
 import { useState } from "react";
 import { CartScreen } from "./components/CartScreen/CartScreen";
 import { Checkout } from "./components/Checkout/Checkout";
@@ -12,33 +13,11 @@ import { Checkout } from "./components/Checkout/Checkout";
 
 function App() {
 
-  const [carrito, setCarrito] = useState([])
-
-  const agregarAlCarrito = (prod) => {
-    setCarrito([...carrito,prod])
-  }
-
-  const eliminarDelCarrito = (id) => {
-    setCarrito(carrito.filter(prod => prod.id !==id))
-  }
-
-  const cantidadCarrito = () => {
-    return carrito.reduce((acc, prod) => acc + prod.cantidad, 0)
-  }
-
-  const vaciarCarrito = () => {
-    setCarrito([])
-    
-  }
-
-  const totalCarrito = () => {
-    return carrito.reduce((acc, prod) => acc + prod.precio * prod.cantidad, 0)
-  }
-
   return (
     <>
-
-    <Context.Provider value={{carrito, totalCarrito, agregarAlCarrito, eliminarDelCarrito, cantidadCarrito, vaciarCarrito}}>
+                
+    <ContextProvider>
+    <CartProvider>
       <BrowserRouter>
           <NavBar/>
           <Switch>
@@ -62,7 +41,8 @@ function App() {
             </Route>
           </Switch>
       </BrowserRouter>
-    </Context.Provider>
+      </CartProvider>
+    </ContextProvider>
 
     </>
   );

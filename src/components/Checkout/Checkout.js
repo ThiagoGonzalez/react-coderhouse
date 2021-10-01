@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import { Context } from "../../context/Context";
+import { CartContext } from "../../context/CartContext";
 import { generarOrden } from "../../firebase/generarOrden";
 import Swal from "sweetalert2";
 import { Redirect } from "react-router";
@@ -7,7 +7,7 @@ import { Redirect } from "react-router";
 
 export const Checkout = () => {
     
-    const {carrito, totalCarrito, vaciarCarrito} = useContext(Context)
+    const {carrito, totalCarrito, vaciarCarrito} = useContext(CartContext)
 
     const [values, setValues] = useState({
         nombre: '',
