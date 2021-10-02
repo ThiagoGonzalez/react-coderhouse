@@ -1,6 +1,7 @@
 # Proyecto E-COMMERCE CoderHouse
 
-Este proyecto fue realizado con React por Thiago Gonzalez Ares.
+Este proyecto fue realizado con React por Thiago Gonzalez Ares para la comisión 16930 del curso REACT JS de la plataforma CoderHouse.
+Es una tienda online con diferentes productos de lo que podria ser un local de venta de hardware y consolas de videojuegos.
 
 ## Scripts disponibles
 
