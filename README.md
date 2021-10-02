@@ -18,19 +18,19 @@ Al realizar un cambio en el codigo y luego guardar, este se vera reflejado en la
 
 ## Librerias utilizadas en el proyecto:
 
-+-- @testing-library/jest-dom@5.14.1  
-+-- @testing-library/react@11.2.7     
-+-- @testing-library/user-event@12.8.3
-+-- bootstrap@5.1.0
-+-- firebase@8.10.0
-+-- gh-pages@3.2.3
-+-- react@17.0.2
-+-- react-bootstrap@2.0.0-beta.6
-+-- react-css-loaders@0.0.6
-+-- react-dom@17.0.2
-+-- react-icons@4.2.0
-+-- react-router-dom@5.2.1
-+-- react-scripts@4.0.3
-+-- styled-components@^4.x
-+-- sweetalert2@11.1.7
-`-- web-vitals@1.1.2
+@testing-library/jest-dom@5.14.1  
+@testing-library/react@11.2.7     
+@testing-library/user-event@12.8.3
+bootstrap@5.1.0
+firebase@8.10.0
+gh-pages@3.2.3
+react@17.0.2
+react-bootstrap@2.0.0-beta.6
+react-css-loaders@0.0.6
+react-dom@17.0.2
+react-icons@4.2.0
+react-router-dom@5.2.1
+react-scripts@4.0.3
+styled-components@^4.x
+sweetalert2@11.1.7
+web-vitals@1.1.2
